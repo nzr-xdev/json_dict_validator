@@ -32,13 +32,13 @@ A powerful tool designed to validate large JSON datasets using dynamic pydantic 
 * **UI/UX**: **CustomTkinter** — modern, dark-themed desktop interface. *(in process)*
 
 ### 🔩 How to run:
-1. **Clone the repository**:
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/nzr-xdev/json_dict_validator.git
-2. **Setup environment & requirements:**:
+2. **Setup environment & requirements:**
    ```bash
    pip install -r requirements.txt
-3. **Run Application:**:
+3. **Run Application:**
    (just for test)
    ```bash
-   python "core.py" 
+   python "main.py" 
