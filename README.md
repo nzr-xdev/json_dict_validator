@@ -39,5 +39,6 @@ A powerful tool designed to validate large JSON datasets using dynamic pydantic 
    ```bash
    pip install -r requirements.txt
 3. **Run Application:**:
+   (just for test)
    ```bash
-   python "main.py"
+   python "core.py" 
