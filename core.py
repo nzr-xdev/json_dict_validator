@@ -36,8 +36,8 @@ class DataValidator:
     def json_export(self, report, folder_path="reports"):
 
         dir = Path(folder_path)
-        dir.parent.mkdir(parents=True, exist_ok=True)
-        time = datetime.now().strftime("%Y%m%d_%H%M%S")
+        dir.mkdir(parents=True, exist_ok=True)
+        time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         file_name = f"report_{time}.json"
         path = dir / file_name
 

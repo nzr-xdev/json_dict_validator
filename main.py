@@ -80,7 +80,7 @@ class DataValidatorGUI(ctk.CTk):
             report_finals = self.validator.verify(data)
 
             for res in report_finals:
-                status_symbol = "✅" if res['status'] == 'ok' else "❌"
+                status_symbol = "✅" if res['status'] == 'OK' else "❌"
                 line_msg = f"{status_symbol} Line {res['line']}: {res['status'].upper()}\n"
                 self.result_box.insert("end", line_msg)
                 
