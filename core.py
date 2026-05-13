@@ -106,7 +106,7 @@ class DataValidator:
 
                 self.model.model_validate(item)
                 report.append({
-                    'line': index+1, 
+                    'set': index+1, 
                     "status": 'OK'})
                 
             except ValidationError as e:
@@ -119,13 +119,13 @@ class DataValidator:
                     errors.append(f"{fd}: {msg}")
                 
                 report.append({
-                    'line': index+1, 
+                    'set': index+1, 
                     "status": 'error',
                     "details": errors
                     })
             except Exception as e:
                 report.append({
-                    "line": index + 1,
+                    "set": index + 1,
                     "status": "error",
                     "details": [f"System error: {str(e)}"]
                 })
