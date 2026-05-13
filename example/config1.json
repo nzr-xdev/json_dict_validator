@@ -1,0 +1,27 @@
+{
+    "employee_id": {
+        "type": "String",
+        "pattern": "^[A-Z]{2}-\\d{4}$"
+    },
+    "full_name": {
+        "type": "String",
+        "min_length": 5,
+        "max_length": 50
+    },
+    "department_code": {
+        "type": "Integer",
+        "ge": 100,
+        "le": 999
+    },
+    "hourly_rate": {
+        "type": "Number",
+        "gt": 15.0,
+        "le": 500.0
+    },
+    "is_remote": {
+        "type": "True/False"
+    },
+    "corporate_email": {
+        "type": "Email"
+    }
+}

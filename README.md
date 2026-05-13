@@ -1,44 +1,63 @@
 # 📃 Dynamic JSON Validator
 
-![GitHub Python version](https://img.shields.io/badge/python-3.10+-blue.svg)
-![Pydantic](https://img.shields.io/badge/library-pydantic-orange.svg)
-![CustomTkinter](https://img.shields.io/badge/UI-CustomTkinter-blueviolet.svg)
+![Python](https://img.shields.io/badge/python-3.10+-blue.svg?style=for-the-badge&logo=python&logoColor=white)
+![Pydantic](https://img.shields.io/badge/pydantic-V2-orange.svg?style=for-the-badge)
+![CustomTkinter](https://img.shields.io/badge/UI-CustomTkinter-blueviolet.svg?style=for-the-badge)
 
-A powerful tool designed to validate large JSON datasets using dynamic pydantic models.
+**Dynamic JSON Validator** is a high-performance desktop tool designed to kill the pain of manual JSON auditing. It generates Pydantic models on the fly based on your config and rips through datasets to find every single broken comma, wrong type, or missing field.
 
 ---
 
-### 🧰 Core Features
+### 🚀 Core Features
 
-* **Dynamic Model Generation**: Creates validation rules on the fly based on user configuration.
-* **Parameter Cleaning**: Automatically filters invalid parameters and injects default presets for strings and numbers.
-* **Advanced Logic Support**:
-    * **Regex Patterns**: Validate IDs, codes, or custom string formats.
-    * **Numerical Ranges**: Checks for `greater than`, `less than`, or `equal`.
-    * **Email Validation**: Built-in verification for emails.
-* **Detailed Reporting**: Generates an audit of your data, highlighting exact error locations and reasons.
+* **On-the-Fly Validation**: No hardcoded models. Define your rules in a JSON config, and the app builds the validation logic instantly.
+* **Visual Debugging**: Errors are highlighted directly in the code view. 
+    * 🔴 **Red** for data mismatches (wrong types, regex fails).
+    * 🟡 **Yellow** for missing fields.
+* **Auto-Format (Prettify)**: Throw in a messy one-line JSON "sausage", and the app will automatically expand it into a clean, readable structure.
+* **Smart "Ignore Missing" Toggle**: Need to skip optional field warnings? Just flip the switch.
+* **Deep Logic Support**:
+    * **Regex Patterns**: Validate IDs, serials, and custom strings.
+    * **Numerical Ranges**: Check for `>` , `<` , or `==`.
+    * **Email Verification**: Built-in logic for corporate or personal emails.
 
-*some features will arive later*
+### 🎮 GUI Preview
 
-<!--### 🎮 GUI Preview
-
-| Config Interface | Validation Report |
+| Interface & Analytics | Error Highlighting |
 | :---: | :---: |
-| ![config_img](images/config.png) | ![report_img](images/report.png) | -->
+| ![Preview 1](images/report_main.png) | ![Preview 2](images/error_view.png) |
 
-### 🚀 Stack & Tools
-* **Language**: **Python** — core engine.
-* **Logic**: **Pydantic V2** — high-speed data validation and type enforcement.
-* **UI/UX**: **CustomTkinter** — modern, dark-themed desktop interface. *(in process)*
+*You can find sample data and config files in the `example/` folder to test the application.*
 
-### 🔩 How to run:
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/nzr-xdev/json_dict_validator.git
-2. **Setup environment & requirements:**
-   ```bash
-   pip install -r requirements.txt
-3. **Run Application:**
-   (just for test)
-   ```bash
-   python "main.py" 
+### 🛠 Tech Stack
+* **Python 3.10+**: The core engine.
+* **Pydantic V2**: Ultra-fast data validation and type enforcement.
+* **CustomTkinter**: Modern, dark-themed UI that won't make your eyes bleed at 3 AM.
+
+---
+
+### 🔩 Installation & Usage
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/nzr-xdev/json_dict_validator.git
+    cd json_dict_validator
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3.  **Launch the App:**
+    ```bash
+    python main.py
+    ```
+
+---
+
+### 📖 How it works:
+1.  **Load Data**: Select your target JSON file.
+2.  **Load Config**: Select the rules file (defining types, ranges, etc.).
+3.  **Run Validation**: Hit the button and watch the magic happen.
+4.  **Audit**: Review the highlighted errors and check the auto-generated JSON report for further processing.
